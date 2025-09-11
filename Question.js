@@ -7,7 +7,8 @@
  * Represents an exam question.
  * 
  * This class encapsulates information associated with each question on an exam, 
- * including a prompt, answer, and choices.
+ * including a prompt, answer, and choices. It constructs a question object from
+ * a row of data typically extracted from a spreadsheet.
  * 
  * @class Question
  * @example
@@ -15,37 +16,37 @@
  * const question = 
  */
 class Question {
-  constructor(prompt, answer, choices) {
+  constructor(rowData) {
     /**
      * The prompt of the question
      * @type {string}
      * @public
      */
-    this.prompt = "Default Question Prompt";
+    this.prompt = rowData[0] || "Default Prompt";
 
     /**
-     * The correct answer to the question
-     * @type {string}
+     * The correct answer to the question as an index in the choices array.
+     * @type {number|null}
      * @public
      */
-    this.answer = "Default Question Answer";
+    this.answer = this.mapAnswerChoiceToArrayIndex(rowData[1]);
 
     /**
-     * The list of choices for answers
-     * @type {array}
-     * @public
+     * The list of choices, taken from the rest of the row.
+     * @type {string[]}
      */
-    this.choices = [];
+    this.choices = rowData.slice(2).filter(choice => choice !== "");
   }
 
+
   /**
-   * Checks if a given choice is the correct answer.
-   * @param {string} choice - The choice to check
-   * @returns {boolean} True if the choice is correct, false otherwise
-   * @public
+   * Converts a letter ('A', 'B') to a zero-based index (0, 1).
+   * @param {string} letter The letter choice from the sheet.
+   * @returns {number|null} The corresponding array index.
    */
-  isCorrect(choice) {
-    return choice === this.answer;
+  mapAnswerChoiceToArrayIndex(letter) {
+    if (!letter || typeof letter !== 'string') return null;
+    return letter.toUpperCase().charCodeAt(0) - 'A'.charCodeAt(0);
   }
   
 }

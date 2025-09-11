@@ -38,6 +38,9 @@ function main() {
 
   const questions = convertRowsToQuestions(values);
 
+  Logger.log("Converted ${questions.length} questions:");
+  Logger.log(questions);
+
 
 }
 
@@ -53,7 +56,11 @@ function convertRowsToQuestions(questionData) {
     const questions = [];
 
   for (const row of questionData) {
-    const question = new Question();
-  }
+    const question = new Question(row);
 
+    if (question.title !== "Default Prompt") {
+      questions.push(question);
+    }
+  }
+    return questions;
 }
