@@ -1,0 +1,42 @@
+# ----------------------------------------------------------------
+# Google Apps Script / Clasp
+# ----------------------------------------------------------------
+.clasp.json
+
+.clasp.run.json
+
+
+# ----------------------------------------------------------------
+# Node.js / npm
+# ----------------------------------------------------------------
+# The massive folder of downloaded dependencies.
+node_modules/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# ----------------------------------------------------------------
+# Build output (for advanced TypeScript/Webpack projects)
+# ----------------------------------------------------------------
+dist/
+build/
+.out/
+
+
+# ----------------------------------------------------------------
+# OS-specific & Editor files
+# ----------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# VS Code
+.vscode/
