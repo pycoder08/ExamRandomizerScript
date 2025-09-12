@@ -48,5 +48,25 @@ class Question {
     if (!letter || typeof letter !== 'string') return null;
     return letter.toUpperCase().charCodeAt(0) - 'A'.charCodeAt(0);
   }
-  
+
+  /**
+   * Randomizes the order of choices and updates the answer index accordingly.
+   * @returns {void}
+   */
+  shuffleChoices() {
+    // Handle blank answers/choices before shuffling
+    if (this.answer === null || this.choices[this.answer] === undefined) {
+      console.warn(`Could not shuffle choices for question "${this.title}" due to invalid answer index.`);
+      return;
+    }
+
+    const correctAnswerText = this.choices[this.answer];
+
+    // Shuffle the choices array using Fisher-Yates algorithm from Code.js
+    shuffleArray(this.choices);
+
+    // Update the answer index to the new position of the correct answer
+    this.answer = this.choices.indexOf(correctAnswerText);
+
+  }
 }
