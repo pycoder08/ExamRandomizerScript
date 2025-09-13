@@ -15,7 +15,7 @@
 -------------------------------------------------------------------*/
 
 /* Menu Function */
-function onOpen(e) {
+function onOpen() {
     let ui = SpreadsheetApp.getUi();
     ui.createMenu('Tayba')
         .addItem('Generate Exam & Answer Key', 'menuItem1')
