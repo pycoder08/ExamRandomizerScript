@@ -1,4 +1,4 @@
-# Exam Randomizer Script
+# Exam Generator Script
 ## Description
 This script uses Google's AppScript functionality to transform a Google sheet into a properly formatted and randomized 
 student exam. It reads all questions in the format prompt/answer/choice1/choice2/etc. It starts reading at column B, 
