@@ -36,4 +36,5 @@ row 8, turning each row into a question object which will then be written into t
 2. Open the Apps Script editor (Extensions > Apps Script).
 3. Copy and paste the provided script into the editor as well as the Question class and the appscript.json file.
 4. Return to your sheet, click "Tayba > Generate Exam & Answer Key"
+   ![Menu Screenshot](guide.png)
 5. Open target folder to find the generated exam and answer key documents.
