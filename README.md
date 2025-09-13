@@ -34,7 +34,7 @@ row 8, turning each row into a question object which will then be written into t
 ## Usage
 1. Open the Google Sheet containing your questions.
 2. Open the Apps Script editor (Extensions > Apps Script).
-3. Copy and paste the provided JS files as well as the appscript.json file into the editor, save.
+3. Copy and paste the provided JS files as well as the appsscript.json file into the editor, save.
 4. Return to your sheet, click "Tayba > Generate Exam & Answer Key"
    ![Menu Screenshot](guide.png)
 5. Open target folder to find the generated exam and answer key documents.
