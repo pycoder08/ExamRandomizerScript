@@ -1,6 +1,6 @@
 /**
  * @fileoverview Defines the Question class for building exams
- * @author Muhammad Conn <muhammad.conn@icloud.com>
+ * @author Muhammad Conn <muhammad.conn@icloud.com>, Tayba Foundation
  */
 
 /**
