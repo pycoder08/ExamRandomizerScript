@@ -15,7 +15,7 @@ row 8, turning each row into a question object which will then be written into t
 - A Google Sheet with questions formatted as follows:
   - Rows 8 onward contain questions
   - Column B: Question Prompt
-  - Column C: Correct Answer (formatted as a letter, e.g., A, B, C)
+  - Column C: Correct Answer (formatted as a capital letter corresponding to the letter of the right answer)
   - Columns D and beyond: Choices (including the correct answer)
 
 - Additionally, the sheet should have:
