@@ -1,10 +1,14 @@
 /**
- * Tayba Foundation - Exam Generator Script 2.0
+ * Tayba Foundation - Exam Generator Script
+ * @fileoverview Script to generate exams and answer keys from a question bank in Google Sheets
+ * @author Muhammad Conn <muhammad.conn@icloud.com>, Tayba Foundation
  *
- *  # Overview
- *
- *  # Usage
+ * # Usage
+ * 1. Set up a Google Sheet with the required metadata and question bank.
+ * 2. Use the "Tayba" menu to generate an exam and answer key as Google Docs.
  */
+
+
 
 /*------------------------------------------------------------------
   Initialize Menu
@@ -46,7 +50,7 @@ function generateExam() {
     const numCols = sheet.getLastColumn() - startCol + 1;
     const config = {
         courseName: sheet.getRange('D1').getValue(),
-        term: Utilities.formatDate(sheet.getRange('D2').getValue(), "PST", "MMMM yyyy"),
+        term: sheet.getRange('D2').getValue(),
         examSize: sheet.getRange('D3').getValue(),
         templateDocId: sheet.getRange('D4').getValue(),
         targetFolderId: sheet.getRange('D5').getValue()
