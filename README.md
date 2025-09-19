@@ -1,4 +1,4 @@
-# Exam Randomizer Script
+# Exam Generator Script
 ## Description
 This script uses Google's AppScript functionality to transform a Google sheet into a properly formatted and randomized 
 student exam. It reads all questions in the format prompt/answer/choice1/choice2/etc. It starts reading at column B, 
@@ -15,7 +15,7 @@ row 8, turning each row into a question object which will then be written into t
 - A Google Sheet with questions formatted as follows:
   - Rows 8 onward contain questions
   - Column B: Question Prompt
-  - Column C: Correct Answer (formatted as a letter, e.g., A, B, C)
+  - Column C: Correct Answer (formatted as a capital letter corresponding to the letter of the right answer)
   - Columns D and beyond: Choices (including the correct answer)
 
 - Additionally, the sheet should have:
@@ -34,7 +34,11 @@ row 8, turning each row into a question object which will then be written into t
 ## Usage
 1. Open the Google Sheet containing your questions.
 2. Open the Apps Script editor (Extensions > Apps Script).
-3. Copy and paste the provided script into the editor as well as the Question class and the appscript.json file.
+3. Copy and paste the provided JS files as well as the appsscript.json file into the editor, save.
 4. Return to your sheet, click "Tayba > Generate Exam & Answer Key"
    ![Menu Screenshot](guide.png)
 5. Open target folder to find the generated exam and answer key documents.
+
+<br>
+
+*Credit to the Tayba Foundation for original source code*
