@@ -41,4 +41,9 @@ row 8, turning each row into a question object which will then be written into t
 
 <br>
 
-*Credit to the Tayba Foundation for original source code*
+### Acknowledgements
+This script was adapted from a tool provided by Tayba Foundation. This version was heavily refactored and extended to restore functionality in time to meet a deadline. Key modifications include:
+- Resolved issues that made the script unusable and outdated
+- Separated question logic into its own class
+- Refined randomization logic to be more streamlined
+- Updated code to be in line with modern JS conventions
