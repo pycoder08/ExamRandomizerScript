@@ -40,3 +40,6 @@ ehthumbs.db
 
 # VS Code
 .vscode/
+
+# JetBrains
+.idea/

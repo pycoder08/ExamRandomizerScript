@@ -104,7 +104,7 @@ function convertRowsToQuestions(questionData) {
     for (const row of questionData) {
         const question = new Question(row);
 
-        if (question.title !== "Default Prompt") {
+        if (question.prompt !== "Default Prompt") {
             questions.push(question);
         }
     }
@@ -203,61 +203,4 @@ function addQuestions(doc, questions, isAnswerKey) {
         }
         text.appendText("\r");
     }
-}
-
-/*------------------------------------------------------------------
-  Debug Methods
--------------------------------------------------------------------*/
-
-/**
- * Logs a sample question for debugging purposes.
- * @param questions An array of Question objects.
- */
-function logTestQuestion(questions) {
-    Logger.log("Sample Question:");
-    Logger.log(`Prompt: ${questions[0].prompt}`);
-    Logger.log(`Choices: ${questions[0].choices}`);
-    Logger.log(`Answer Index: ${questions[0].answer}`);
-    Logger.log(`Correct Answer: ${questions[0].choices[questions[0].answer]}`);
-}
-
-/**
- * Logs the state of a question before and after shuffling its choices for debugging purposes.
- * @param questions An array of Question objects.
- */
-function logTestShuffleChoices(questions) {
-    Logger.log("Before shuffling choices:");
-    Logger.log(`Choices: ${questions[0].choices}`);
-    Logger.log(`Answer Index: ${questions[0].answer}`);
-    Logger.log(`Correct Answer: ${questions[0].choices[questions[0].answer]}`);
-
-    questions[0].shuffleChoices();
-    Logger.log("After shuffling choices:");
-    Logger.log(`Choices: ${questions[0].choices}`);
-    Logger.log(`Answer Index: ${questions[0].answer}`);
-    Logger.log(`Correct Answer: ${questions[0].choices[questions[0].answer]}`);
-}
-
-/**
- * Logs the state of the questions before and after shuffling for debugging purposes.
- * @param questions An array of Question objects.
- */
-function logTestShuffling(questions) {
-    // Logging for debugging
-    Logger.log("First question in the bank:")
-    logTestQuestion(questions);
-    Logger.log("--------------------------------");
-
-
-    // Randomization
-    const randomizedQuestions = shuffleQuestions(questions);
-
-    // Logging for debugging
-    Logger.log("First question after randomization:");
-    logTestQuestion(randomizedQuestions);
-
-    Logger.log("--------------------------------");
-
-    // Logging to test randomization within one question object
-    logTestShuffleChoices(questions);
 }

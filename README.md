@@ -1,4 +1,7 @@
 # Exam Generator Script
+
+> **What this is:** A [Google Apps Script](https://developers.google.com/apps-script) bound to a Google Sheet — not a standalone Node.js project. `package.json` and `appsscript.json` are only there for local editor support; they aren't part of deployment. To use the script, copy the JS files into the Apps Script editor as described under [Usage](#usage) below.
+
 ## Description
 This script uses Google's AppScript functionality to transform a Google sheet into a properly formatted and randomized 
 student exam. It reads all questions in the format prompt/answer/choice1/choice2/etc. It starts reading at column B, 

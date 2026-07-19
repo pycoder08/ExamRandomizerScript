@@ -56,7 +56,7 @@ class Question {
   shuffleChoices() {
     // Handle blank answers/choices before shuffling
     if (this.answer === null || this.choices[this.answer] === undefined) {
-      console.warn(`Could not shuffle choices for question "${this.title}" due to invalid answer index.`);
+      console.warn(`Could not shuffle choices for question "${this.prompt}" due to invalid answer index.`);
       return;
     }
 
